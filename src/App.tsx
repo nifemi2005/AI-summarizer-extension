@@ -115,15 +115,6 @@ function App() {
     await navigator.clipboard.writeText(text);
   }
 
-  function sanitizeText(text: string): string {
-    return text
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;")
-      .replace(/'/g, "&#x27;")
-      .replace(/\//g, "&#x2F;");
-  }
-
   return (
     <div className="w-[320px] bg-white rounded-2xl overflow-hidden border border-gray-100 m-3">
       {/* Header */}
@@ -224,7 +215,7 @@ function App() {
                 <li key={index} className="flex items-start gap-2">
                   <div className="w-1.5 h-1.5 rounded-full bg-[#7F77DD] flex-shrink-0 mt-1" />
                   <span className="text-[12px] text-gray-800 leading-snug">
-                    {sanitizeText(point)}
+                    {point}
                   </span>
                 </li>
               ))}
@@ -242,7 +233,7 @@ function App() {
                   key={index}
                   className="bg-[#EEEDFE] border border-[#AFA9EC] rounded-lg px-2.5 py-2 text-[11px] text-[#3C3489] leading-snug"
                 >
-                  {sanitizeText(insight)}
+                  {insight}
                 </div>
               ))}
             </div>
