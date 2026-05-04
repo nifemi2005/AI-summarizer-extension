@@ -205,7 +205,7 @@ on the AI Summarizer card.
 ## Demo Video
 
 A short demo video showing the extension in action is available at:
-[https://drive.google.com/file/d/1vud63Z4ElVryzgFhw4IbPH69nKpMpFmi/view?usp=sharing]
+https://drive.google.com/file/d/1vud63Z4ElVryzgFhw4IbPH69nKpMpFmi/view?usp=sharing
 
 The demo covers:
 - Installing the extension locally
