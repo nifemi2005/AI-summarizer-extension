@@ -33,7 +33,16 @@ function extractPageContent(): string {
   }
 
   //clean up the extracted text
-  const cleaned = mainContent.replace(/\s+/g, " ").replace(/\n+/g, "\n").trim();
+  const cleaned = mainContent
+    .replace(/\s+/g, " ")
+    .replace(/\n+/g, "\n")
+    // sanitize — remove any script or html tags that slipped through
+    .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, "")
+    .replace(/<[^>]+>/g, "")
+    // remove any potential XSS attempts
+    .replace(/javascript:/gi, "")
+    .replace(/on\w+=/gi, "")
+    .trim();
 
   // limit to 5000 characters to avoid hitting API token limits
   return cleaned.slice(0, 5000);
