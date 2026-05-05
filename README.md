@@ -89,9 +89,13 @@ ai-summarizer/
 
 ### How the pieces connect
 User clicks "Summarize"
+
 ↓
+
 popup (App.tsx)
-↓ chrome.tabs.sendMessage
+
+↓ 
+chrome.tabs.sendMessage
 content.ts (runs on the page)
 ↓ extracts readable content
 ↓ sendResponse back to popup
