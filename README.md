@@ -69,23 +69,23 @@ ai-summarizer/
 
 ├── public/
 
-│   ├── manifest.json      # Chrome extension configuration
+│   ├── manifest.json      (Chrome extension configuration)
 
-│   └── icons/             # Extension icons (16, 32, 48, 128px)
+│   └── icons/             (Extension icons (16, 32, 48, 128px))
 
 ├── src/
 
-│   ├── App.tsx            # Popup UI — all states (default, loading, result, error)
+│   ├── App.tsx            (Popup UI — all states (default, loading, result, error))
 
-│   ├── main.tsx           # React entry point
+│   ├── main.tsx           (React entry point)
 
-│   ├── index.css          # Global styles and animations
+│   ├── index.css          (Global styles and animations)
 
-│   ├── background.ts      # Service worker — handles AI API calls and caching
+│   ├── background.ts      (Service worker — handles AI API calls and caching)
 
-│   └── content.ts         # Content script — extracts page content
+│   └── content.ts         (Content script — extracts page content)
 
-└── dist/                  # Built extension — loaded into Chrome
+└── dist/                  (Built extension — loaded into Chrome)
 
 ### How the pieces connect
 User clicks "Summarize"
