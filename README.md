@@ -67,7 +67,9 @@ Replace `your-api-key-here` with your actual Anthropic API key.
 ## Architecture Explanation
 ai-summarizer/
 ├── public/
+
 │   ├── manifest.json      # Chrome extension configuration
+
 │   └── icons/             # Extension icons (16, 32, 48, 128px)
 ├── src/
 │   ├── App.tsx            # Popup UI — all states (default, loading, result, error)
