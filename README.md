@@ -95,19 +95,40 @@ User clicks "Summarize"
 popup (App.tsx)
 
 ↓ 
+
 chrome.tabs.sendMessage
+
 content.ts (runs on the page)
-↓ extracts readable content
-↓ sendResponse back to popup
+↓ 
+
+extracts readable content
+↓ 
+
+sendResponse back to popup
+
 popup (App.tsx)
-↓ chrome.runtime.sendMessage
+↓ 
+
+chrome.runtime.sendMessage
+
 background.ts (service worker)
-↓ checks chrome.storage cache
-↓ if no cache → calls Claude API
-↓ saves result to cache
-↓ sendResponse back to popup
+↓ 
+
+checks chrome.storage cache
+↓ 
+
+if no cache → calls Claude API
+↓ 
+
+saves result to cache
+↓ 
+
+sendResponse back to popup
+
 popup (App.tsx)
-↓ renders summary, insights, reading time
+↓ 
+
+renders summary, insights, reading time
 
 ---
 
